@@ -1,0 +1,6 @@
+
+<view class="container">
+  <image class="icon" src="{{first ? leftSrc : disLeftSrc}}" alt="" />
+  <text class="title">{{title}}</text>
+  <image class="icon" src="{{last ? disRightSrc : rightSrc}}" alt="" />
+</view>
