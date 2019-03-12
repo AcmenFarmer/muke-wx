@@ -32,6 +32,13 @@ Page({
     likeModel._likeSave(likeStatus, this.data.classicData.id, this.data.classicData.type)
   },
 
+  onNext: (event) => {
+    console.log("left")
+  },
+
+  onPrev: (event) => {
+    console.log("right");
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */ 

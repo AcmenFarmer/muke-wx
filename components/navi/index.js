@@ -23,6 +23,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    onNext: function(event) {
+      console.log("1=",this.properties.first)
+      this.triggerEvent("left", {
 
+      })
+    },
+    onPrev: function (event) {
+      console.log("2=",this.properties.last)
+      this.triggerEvent("right", {
+
+      })
+    }
   }
 })

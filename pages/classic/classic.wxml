@@ -1,8 +1,8 @@
 <view class="container">
   <view class="header">
-    <Date class="date" index="08"></Date>
+    <Date class="date" index="{{classicData.index}}"></Date>
     <Like class="like" bind:like="onLike" like="{{classicData.like_status}}" likeCount="{{classicData.fav_nums}}"></Like>
   </view>
   <movie img="{{classicData.image}}" content="{{classicData.content}}"></movie>
-  <Navi class="navi" title="{{classicData.title}}" last="{{classicData.last}}" first="{{classicData.first}}"></Navi>
+  <Navi bind:left="onNext" bind:right="onPrev" class="navi" title="{{classicData.title}}" last="{{classicData.last}}" first="{{classicData.first}}"></Navi>
 </view>

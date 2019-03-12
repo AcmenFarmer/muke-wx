@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "Like": "/components/like/index",
-    "movie": "/components/movie/index",
+    "movie": "/components/classic/movie/index",
     "Date": "/components/date/index",
     "Navi": "/components/navi/index"
   }
