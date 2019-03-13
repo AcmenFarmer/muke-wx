@@ -2,6 +2,8 @@
   "usingComponents": {
     "Like": "/components/like/index",
     "movie": "/components/classic/movie/index",
+    "music": "/components/classic/music/index",
+    "essay": "/components/classic/essay/index",
     "Date": "/components/date/index",
     "Navi": "/components/navi/index"
   }

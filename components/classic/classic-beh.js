@@ -1,7 +1,8 @@
 let classicBeh = Behavior({
   properties: {
     content: String,
-    img: String
+    img: String,
+    hidden: Boolean
   },
 })
 
