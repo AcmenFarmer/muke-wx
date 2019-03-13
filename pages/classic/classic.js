@@ -32,15 +32,26 @@ Page({
     likeModel._likeSave(likeStatus, this.data.classicData.id, this.data.classicData.type)
   },
 
-  onNext: (event) => {
-    console.log("left")
+  onNext: function (event) {
+    this._updateClassic('next')
   },
 
-  onPrev: (event) => {
-    console.log("right");
+  onPrev: function (event) {
+    this._updateClassic('previous') 
+  },
+
+  _updateClassic: function (nextOrPrev) {
+    let index = this.data.classicData.index;
+    classicModel.getNextOrPrevious(index, nextOrPrev, (res) => {
+      this.setData({
+        classicData: res,
+        last: classicModel.isLast(res.index),
+        first: classicModel.isFirst(res.index)
+      })
+    })
   },
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监 听页面初次渲染完成
    */ 
   onReady: function () {
 

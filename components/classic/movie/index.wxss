@@ -1,11 +1,11 @@
 /* components/movie/index.wxss */
-.movie-content {
+.classic-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.movie-img {
+.classic-img {
   width: 750rpx;
   height: 500rpx;
 }

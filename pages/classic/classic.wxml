@@ -4,5 +4,5 @@
     <Like class="like" bind:like="onLike" like="{{classicData.like_status}}" likeCount="{{classicData.fav_nums}}"></Like>
   </view>
   <movie img="{{classicData.image}}" content="{{classicData.content}}"></movie>
-  <Navi bind:left="onNext" bind:right="onPrev" class="navi" title="{{classicData.title}}" last="{{classicData.last}}" first="{{classicData.first}}"></Navi>
+  <Navi bind:left="onNext" bind:right="onPrev" class="navi" title="{{classicData.title}}" last="{{last}}" first="{{first}}"></Navi>
 </view>

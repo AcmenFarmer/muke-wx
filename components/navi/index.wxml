@@ -1,6 +1,6 @@
 
 <view class="container">
-  <image bind:tap="onNext" class="icon" src="{{first ? leftSrc : disLeftSrc}}" alt="" />
+  <image bind:tap="onNext" class="icon" src="{{last ? disLeftSrc : leftSrc}}" alt="" />
   <text class="title">{{title}}</text>
-  <image bind:tap="onPrev" class="icon" src="{{last ? disRightSrc : rightSrc}}" alt="" />
+  <image bind:tap="onPrev" class="icon" src="{{first ? disRightSrc : rightSrc}}" alt="" />
 </view>

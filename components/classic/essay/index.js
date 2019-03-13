@@ -1,4 +1,4 @@
-// components/movie/index.js
+// components/classic/essay/index.js
 import { classicBeh } from '../classic-beh'
 Component({
   behaviors: [classicBeh],
@@ -12,7 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+
   },
 
   /**

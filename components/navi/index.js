@@ -5,8 +5,12 @@ Component({
    */
   properties: {
     title: String,
-    first: Boolean,
-    last: Boolean
+    first: {
+      type: Boolean
+    },
+    last: {
+      type: Boolean
+    }
   },
 
   /**
@@ -19,21 +23,28 @@ Component({
     disLeftSrc: './images/triangle.dis@left.png'
   },
 
+  // attached() {
+  //   console.log('aaa=',this.properties)
+  // },
+
   /**
    * 组件的方法列表
    */
   methods: {
-    onNext: function(event) {
-      console.log("1=",this.properties.first)
-      this.triggerEvent("left", {
+    onNext: function (event) {
+      // console.log("1=",this.properties.first)
+      if(!this.properties.last){
+        this.triggerEvent("left", {
 
-      })
+        })
+      }
     },
     onPrev: function (event) {
-      console.log("2=",this.properties.last)
-      this.triggerEvent("right", {
+      if (!this.properties.first) {
+        this.triggerEvent("right", {
 
-      })
+        })
+      }
     }
   }
 })
