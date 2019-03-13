@@ -13,7 +13,9 @@ Page({
   data: {
     classicData: {},
     last: true,
-    first: false
+    first: false,
+    likeStatus: null,
+    favNums: null
   },
 
   /**
@@ -22,7 +24,9 @@ Page({
   onLoad: function (options) {
     classicModel.getLatest((res) => {
       this.setData({
-        classicData: res
+        classicData: res,
+        likeStatus: res.like_status,
+        favNums: res.fav_nums
       })
     })
   },
@@ -47,6 +51,14 @@ Page({
         classicData: res,
         last: classicModel.isLast(res.index),
         first: classicModel.isFirst(res.index)
+      })
+
+      // 重新调用like组件状态，解决缓存问题
+      likeModel._getLikeStatus(res.type, res.id, (res) => {
+        this.setData({
+          likeStatus: res.like_status,
+          favNums: res.fav_nums
+        })
       })
     })
   },
