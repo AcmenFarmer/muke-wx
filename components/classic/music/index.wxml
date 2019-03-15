@@ -1,5 +1,5 @@
 <view hidden="{{hidden}}" class="classic-container">
-  <image class="classic-img" src="{{img}}"/>
+  <image class="classic-img {{palying ? 'rotation' : ''}}" src="{{img}}"/>
   <image bind:tap="onPlay" 
     class="player-img" 
     src="{{palying ? pauseSrc : playSrc}}"/>

@@ -4,7 +4,7 @@
     <Like class="like" bind:like="onLike" like="{{likeStatus}}" likeCount="{{favNums}}"></Like>
   </view>
   <movie hidden="{{classicData.type != 100}}" img="{{classicData.image}}" content="{{classicData.content}}" />
-  <music hidden="{{classicData.type != 200}}" title="{{classicData.title}}" src="{{classicData.url}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+  <music wx:if="{{classicData.type == 200}}" title="{{classicData.title}}" src="{{classicData.url}}" img="{{classicData.image}}" content="{{classicData.content}}" />
   <essay hidden="{{classicData.type != 300}}" img="{{classicData.image}}" content="{{classicData.content}}" />
   <Navi bind:left="onNext" bind:right="onPrev" class="navi" title="{{classicData.title}}" last="{{last}}" first="{{first}}"></Navi>
 </view>
